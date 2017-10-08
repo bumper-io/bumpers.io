@@ -1,0 +1,30 @@
+MVP:
+- single arena that all players load in to
+  - on frontend entire arena must be loaded so players can see
+    any approaching opponents
+- client-server communication which facilitates gameplay
+  - Javascript frontend embedded in webpage takes player input and
+    displays game state; will handle reading & drawing game state locally
+  - Golang (?) backend provides global player states on timed interval
+    (i.e if rendered at 30 FPS, then build state messages for every 1/30s)
+- point system; resets on player deaths
+- timed matches; resets game state after x minutes
+
+
+Full Specs:
+- tiered arenas with a maximum of 5 players at a time
+  - progress up tiers via knocking an opponent out OR
+    surviving for x seconds without being knocked out
+  - after n tiers, a player will score a point and be sent back to
+    the bottom tier arena
+  - use some ADT to smartly place players so that arenas are as full as possible
+- each round now tracks the scored points rather than # of KOs
+
+Extras:
+- after reaching the top tier, you choose some sort of 'stat' bonus
+  (eg: weight, speed, reduced size) which lasts for the entire round
+- over the course of a match the arenas will fall apart
+  - requires UI and backend changes
+  - implement undirected graph bridge detection to avoid islands (?)
+- Artwork: Cutesy faces w/ facial expressions; Snipperclips-esque
+- Music: Goofy/upbeat music; Mario Party-esque

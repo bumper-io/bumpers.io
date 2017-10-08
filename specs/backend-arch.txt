@@ -1,0 +1,10 @@
+GCE hosting Kubernetes & Docker backend server
+- Golang service handles receiving input from clients (player state JSON)
+  - client connections will use (TCP?) sockets for fast response times
+  - for each client, this service will publish these into corresponding
+    indices of an ElasticSearch cluster
+- (?) service will read off player states from all indices in ElasticSearch, and
+  determine if any changes are required (eg: due to player colision or death)
+    - if changes are required, the service rewrites the player state
+    - once all processing is done, sends the bulk player states back to Golang
+      service to send message back to clients (so UI can be updated)

@@ -1,0 +1,4 @@
+Javascript frontend client
+- Express/Node 'backend' component which communicates with server
+- Client-side takes player input ('Left') and updates locally stored
+  player state (x,y pos & velocity) before sending as JSON to server
