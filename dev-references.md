@@ -13,12 +13,15 @@ http://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html
 -> http://www.kinematicsoup.com/news/2017/5/30/multiplayerprediction
    - 'Converging prediction' algorithm
 
+https://www.html5rocks.com/en/tutorials/canvas/notearsgame/
+- HTML5 canvas game set-up walkthrough
+
+https://hackernoon.com/how-to-build-a-multiplayer-browser-game-4a793818c29b
+- HTML5 canvas game set-up walkthrough 
+
 ## Client Side
 https://www.tutorialspoint.com/expressjs/expressjs_static_files.htm
 - Serving static files via express
-
-https://www.html5rocks.com/en/tutorials/canvas/notearsgame/
-- Writing a game loop for HTML5 canvas
 
 https://github.com/socketio/socket.io-client#how-to-use
 - Set-up browser-side Socket.io connection to backend Node.js server
