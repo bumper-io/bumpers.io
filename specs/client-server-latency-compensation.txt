@@ -1,0 +1,9 @@
+Start stupid; no latency compensation/prediction/reconciliation
+- Keep server self-authoritative over users' positions (users do not provide positions, just actions; server sends out what its positions are)
+- Results in jumping and warping backwards along client's path
+  - Server reconciliation will solve this
+- Results in seeing past locations of other players rather than real time (i.e: if favoring acting player, "I totally didn't get hit", "But I hit you on my screen")
+
+First 'latency compensation' Design:
+- Keep server's internal game world in the 'past', but when sending out state, use SERVER'S forecasted positions (based on average global/player-specific roundtrip time)
+  - Thus if an interaction should occur on a client's screen, unless the receiving player is horrendously out of sync, the server (who is in the past) should end up replicating the event. Then it can broadcast the new state based on that action occuring.
