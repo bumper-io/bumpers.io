@@ -1,3 +1,8 @@
+## Node packages to Investigate
+https://www.npmjs.com/package/socket.io
+https://www.npmjs.com/package/socket.io-client
+https://www.npmjs.com/package/planck-js
+
 ## Game Programming
 http://gameprogrammingpatterns.com/game-loop.html
 - 'Game Loop' design pattern overview/considerations
